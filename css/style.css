@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  color: #333333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #555;
+}
+.navbar .navbar-brand {
+  color: #fff;
+}
+.navbar .navbar-brand:hover {
+  color: #1a88ff;
+}
+.navbar .nav-link {
+  color: #ddd;
+}
+.navbar .nav-link:hover {
+  color: #fff;
+}
+
+.masthead {
+  background-color: #eee;
+  padding: 2rem 0;
+  text-align: center;
+}
+.masthead h1 {
+  margin-bottom: 0.5rem;
+}
+.masthead .lead {
+  color: #003d80;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+section h2 {
+  color: #00254d;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.gallery {
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+
+.testimonials {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+.testimonials .testimonial-item {
+  margin-bottom: 1rem;
+}
+
+.faq {
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+.faq .faq-item {
+  margin-bottom: 1rem;
+}
+
+.appointment-form {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+}
+.appointment-form form {
+  display: flex;
+  flex-direction: column;
+}
+.appointment-form form label {
+  margin: 0.5rem 0;
+}
+.appointment-form form input[type=text],
+.appointment-form form input[type=tel],
+.appointment-form form input[type=email],
+.appointment-form form select,
+.appointment-form form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.appointment-form form button[type=submit] {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+.appointment-form form button[type=submit]:hover {
+  background-color: #003d80;
+}
+
+.contact {
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+
+.footer {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+  .navbar .navbar-nav .nav-item {
+    display: block;
+  }
+  .container {
+    width: 95%;
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

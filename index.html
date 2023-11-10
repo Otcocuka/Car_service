@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автосервис</title>
+  <!-- Подключение минифицированного CSS файла -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Подключение Bootstrap CDN если нужно -->
+  
+</head>
+<body>
+
+  
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">АвтоМастерская Премиум</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Домой <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <a class="nav-link" href="tel:+9951234567890"><span class="phone-icon">📞</span> +995 (123) 456-7890</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="header_top">
+                <div class="header_top__info">
+                    <div class="telephone"><a href="tel:+995123123123">+995123123123</a></div>
+                    <div class="schedule">С 9:00 до 19:00 без выходных</div>
+                </div>
+                <div class="header_top__button">
+                    <button class="button-secondary"></button>
+                </div>
+            </div>
+            <div class="header_bottom"></div>
+        </div>
+    </nav>
+</header>
+
+<!-- Геройский Блок -->
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="hero-title">Ваш автомобиль заслуживает лучшего — доверьтесь профессионалам!</h1>
+        <img src="clients.jpg" alt="Счастливые клиенты" class="hero-image">
+        <a href="#appointment-form" class="btn btn-primary btn-lg hero-cta">Записаться на сервис сейчас</a>
+    </div>
+</section>
+
+<!-- О Нас -->
+<section class="about-us">
+    <div class="container">
+        <h2>О нас</h2>
+        <p>С 2005 года мы предоставляем полный спектр услуг по уходу за вашим автомобилем. Наша команда - это сертифицированные мастера с международным опытом.</p>
+        <img src="team.jpg" alt="Наша команда" class="about-image">
+    </div>
+</section>
+
+<!-- Услуги -->
+<section id="services" class="services">
+    <div class="container">
+        <h2>Услуги</h2>
+        <p>Компьютерная диагностика, шиномонтаж, ремонт двигателя, кузовные работы и многое другое.</p>
+        <!-- Здесь можно добавить иконки для каждой услуги -->
+    </div>
+</section>
+
+<!-- Преимущества -->
+<section class="benefits">
+    <div class="container">
+        <h2>Преимущества</h2>
+        <p>Быстро, качественно, с гарантией на все виды работ. Бесплатная диагностика при любом ремонте.</p>
+        <!-- Слайдер с отзывами -->
+    </div>
+</section>
+
+<!-- Цены -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2>Цены</h2>
+        <p>Шиномонтаж от 50 GEL. Сезонное предложение: подготовка к зиме - скидка 20%.</p>
+    </div>
+</section>
+
+<!-- Фотогалерея -->
+<!-- Галерея работ -->
+<section class="gallery">
+    <div class="container">
+        <h2>Галерея работ</h2>
+        <!-- Вставьте ваш слайдер с фотографиями "До" и "После" здесь -->
+    </div>
+</section>
+
+<!-- Отзывы Клиентов -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h2>Отзывы наших клиентов</h2>
+        <!-- Вставьте блок отзывов клиентов сюда -->
+        <a href="url_на_страницу_с_отзывами">Читать все отзывы</a>
+    </div>
+</section>
+
+<!-- FAQ - Часто задаваемые вопросы -->
+<section class="faq">
+    <div class="container">
+        <h2>Часто задаваемые вопросы</h2>
+        <!-- Вставьте аккордеон или список вопросов и ответов здесь -->
+    </div>
+</section>
+
+<!-- Форма Записи -->
+<section id="appointment-form" class="appointment-form">
+    <div class="container">
+        <h2>Запись на сервис</h2>
+        <!-- Форма записи на сервис -->
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Ваш телефон" required>
+            <input type="text" placeholder="Марка и модель автомобиля" required>
+            <input type="date" placeholder="Желаемая дата" required>
+            <input type="time" placeholder="Желаемое время" required>
+            <button type="submit">Записаться</button>
+        </form>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Контактная информация</h2>
+        <!-- Интерактивная карта -->
+        <!-- Вставьте iframe с Google Maps или аналогичным сервисом -->
+        <p>ул. Либерти, 45, с 9:00 до 19:00 без выходных</p>
+        <p>+995 (123) 456-7890</p>
+    </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 АвтоМастерская Премиум. Все права защищены.</p>
+        <nav>
+            <!-- Ссылки на основные разделы сайта -->
+            <a href="#home">Домой</a>
+            <a href="#services">Услуги</a>
+            <a href="#pricing">Цены</a>
+            <a href="#testimonials">Отзывы</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <!-- Ссылки на социальные сети -->
+        <!-- Вставьте иконки социальных сетей и ссылки на профили -->
+        <div class="legal">
+            <a href="#privacy-policy">Политика конфиденциальности</a>
+            <a href="#terms-of-use">Условия использования</a>
+        </div>
+    </div>
+</footer>
+
+
+  <!-- Подключение скриптов Bootstrap CDN если нужно -->
+  <!-- Ваши JavaScript файлы -->
+  <script src="js/script.js"></script>
+</body>
+</html>
