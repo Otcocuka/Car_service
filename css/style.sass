@@ -1,0 +1,116 @@
+// Глобальные переменные
+$primary-color: #0056b3
+$secondary-color: #ffffff
+$background-color: #f4f4f4
+$text-color: #333333
+$font-stack: 'Helvetica', sans-serif
+
+// Сброс стилей и базовые стили
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: $font-stack
+  color: $text-color
+  background-color: $background-color
+  line-height: 1.6
+
+.container
+  width: 80%
+  margin: auto
+  max-width: 1200px
+
+
+//header
+
+.header_top
+    margin-top: 1rem
+    display: flex
+    gap: 1rem
+    .social_links
+        display: flex
+        &>a
+            display: block
+            margin-right: 20px
+        
+
+// Стили для галереи
+.gallery
+  background-color: $secondary-color
+  padding: 2rem 0
+
+// Стили для отзывов
+.testimonials
+  background-color: $primary-color
+  color: $secondary-color
+  padding: 2rem 0
+
+  .testimonial-item
+    margin-bottom: 1rem
+
+// Стили для FAQ
+.faq
+  background-color: $secondary-color
+  padding: 2rem 0
+
+  .faq-item
+    margin-bottom: 1rem
+
+// Стили для формы записи
+.appointment-form
+  background-color: $background-color
+  padding: 2rem 0
+
+  form
+    display: flex
+    flex-direction: column
+
+    label
+      margin: 0.5rem 0
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    select,
+    textarea
+      width: 100%
+      padding: 0.5rem
+      margin-bottom: 1rem
+
+    button[type='submit']
+      background-color: $primary-color
+      color: $secondary-color
+      padding: 0.5rem 2rem
+      border: none
+      cursor: pointer
+
+      &:hover
+        background-color: darken($primary-color, 10%)
+
+// Стили для контактной информации
+.contact
+  background-color: $secondary-color
+  padding: 2rem 0
+
+// Стили для подвала
+.footer
+  background-color: $primary-color
+  color: $secondary-color
+  padding: 1rem 0
+
+  .footer-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+// Медиа запросы для адаптивности
+@media (max-width: 768px)
+  .container
+    width: 95%
+
+  .footer-content
+    flex-direction: column
