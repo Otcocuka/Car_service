@@ -1,31 +1,47 @@
 // Глобальные переменные
-$primary-color: #0056b3
-$secondary-color: #ffffff
-$background-color: #f4f4f4
-$text-color: #333333
+$primary-color: #ff0135
+$secondary-color: #01ffcb
+$background-color: #000
+$text-color: #fff
 $font-stack: 'Helvetica', sans-serif
 
 // Сброс стилей и базовые стили
 *,
 *::before,
 *::after
-  box-sizing: border-box
-  margin: 0
-  padding: 0
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-weight: 500
+
+ul
+    list-style-type: none
+
+a
+    text-decoration: none
+    color: #fff
+
+.column
+    flex-direction: column
 
 body
-  font-family: $font-stack
-  color: $text-color
-  background-color: $background-color
-  line-height: 1.6
+    font-family: $font-stack
+    color: $text-color
+    background-color: $background-color
+    line-height: 1.6
+    font-size: 18px
 
 .container
-  width: 80%
-  margin: auto
-  max-width: 1200px
-
+    width: 80%
+    margin: auto
+    max-width: 1200px
+    display: flex
 
 //header
+.header
+    position: sticky
+    top: 0
+    padding-top: 1rem
 
 .header_top
     margin-top: 1rem
@@ -36,81 +52,179 @@ body
         &>a
             display: block
             margin-right: 20px
-        
+.navbar
+    margin-top: 1rem
+    display: flex
+    gap: 1rem
+    display: flex
+    justify-content: space-between
+
+// HEADER STYLES
+.page-header
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    padding: 20px 0
+    z-index: 1
+    background-color: rgba(255, 0, 68, 0.6)
+
+nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+button
+    display: flex
+    align-items: center
+    font-size: 16px
+    font-weight: bold
+    padding: 14px 20px
+    border-radius: 10px
+    color: white
+    background: #08a6df
+    transition: background 0.3s
+
+    svg
+        flex-shrink: 0
+        margin-left: 5px
+        fill: currentColor
+
+    &:hover
+        background: #0ab8f6
+
+// STICKY STYLES
+
+.page-header.is-sticky
+    position: fixed
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1)
+    padding: 8px 0
+    backdrop-filter: blur(10px)
+    animation: slideDown 0.35s ease-out
+
+img
+    max-width: 80%
+
+button
+    font-size: 1rem
+    background-color: $primary-color
+    padding: 0.5rem 2rem
+    border: none
+    cursor: pointer
+
+@keyframes slideDown
+    from
+        transform: translateY(-100%)
+    to
+        transform: translateY(0)
+
+
+section
+    
+    min-height: 100vh
+//hero
+
+.hero
+    padding-top: 20rem
+    min-height: 100vh
+    font-size: 2rem
+    position: relative
+    overflow: hidden
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: url('/img/bg-header-2.jpeg.webp') no-repeat center center / cover
+        filter: blur(3px)
+        z-index: -1
+
+    &_button
+        background-color: $primary-color
+        color: $secondary-color
+        padding: 0.5rem 2rem
+        border: none
+        cursor: pointer
+        width: 30rem
+    &_title
+        display: block
+        margin-bottom: 10rem
 
 // Стили для галереи
 .gallery
-  background-color: $secondary-color
-  padding: 2rem 0
+    background-color: $secondary-color
+    padding: 2rem 0
 
 // Стили для отзывов
 .testimonials
-  background-color: $primary-color
-  color: $secondary-color
-  padding: 2rem 0
+    background-color: $primary-color
+    color: $secondary-color
+    padding: 2rem 0
 
-  .testimonial-item
+.testimonial-item
     margin-bottom: 1rem
 
 // Стили для FAQ
 .faq
-  background-color: $secondary-color
-  padding: 2rem 0
+    background-color: $secondary-color
+    padding: 2rem 0
 
-  .faq-item
+.faq-item
     margin-bottom: 1rem
 
 // Стили для формы записи
 .appointment-form
-  background-color: $background-color
-  padding: 2rem 0
+    background-color: $background-color
+    padding: 2rem 0
 
-  form
+form
     display: flex
     flex-direction: column
 
     label
-      margin: 0.5rem 0
+        margin: 0.5rem 0
 
     input[type='text'],
     input[type='tel'],
     input[type='email'],
     select,
     textarea
-      width: 100%
-      padding: 0.5rem
-      margin-bottom: 1rem
+        width: 100%
+        padding: 0.5rem
+        margin-bottom: 1rem
 
     button[type='submit']
-      background-color: $primary-color
-      color: $secondary-color
-      padding: 0.5rem 2rem
-      border: none
-      cursor: pointer
+        background-color: $primary-color
+        color: $secondary-color
+        padding: 0.5rem 2rem
+        border: none
+        cursor: pointer
 
-      &:hover
+    &:hover
         background-color: darken($primary-color, 10%)
 
 // Стили для контактной информации
 .contact
-  background-color: $secondary-color
-  padding: 2rem 0
+    background-color: $secondary-color
+    padding: 2rem 0
 
 // Стили для подвала
 .footer
-  background-color: $primary-color
-  color: $secondary-color
-  padding: 1rem 0
+    background-color: $primary-color
+    color: $secondary-color
+    padding: 1rem 0
 
-  .footer-content
+.footer-content
     display: flex
     justify-content: space-between
     align-items: center
 
 // Медиа запросы для адаптивности
 @media (max-width: 768px)
-  .container
+.container
     width: 95%
 
-  .footer-content
+.footer-content
     flex-direction: column

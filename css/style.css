@@ -4,19 +4,41 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.column {
+  flex-direction: column;
 }
 
 body {
   font-family: "Helvetica", sans-serif;
-  color: #333333;
-  background-color: #f4f4f4;
+  color: #fff;
+  background-color: #000;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 .container {
   width: 80%;
   margin: auto;
   max-width: 1200px;
+  display: flex;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
 }
 
 .header_top {
@@ -32,80 +54,191 @@ body {
   margin-right: 20px;
 }
 
-.gallery {
-  background-color: #ffffff;
-  padding: 2rem 0;
-}
-
-.testimonials {
-  background-color: #0056b3;
-  color: #ffffff;
-  padding: 2rem 0;
-}
-.testimonials .testimonial-item {
-  margin-bottom: 1rem;
-}
-
-.faq {
-  background-color: #ffffff;
-  padding: 2rem 0;
-}
-.faq .faq-item {
-  margin-bottom: 1rem;
-}
-
-.appointment-form {
-  background-color: #f4f4f4;
-  padding: 2rem 0;
-}
-.appointment-form form {
+.navbar {
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
-.appointment-form form label {
-  margin: 0.5rem 0;
+
+.page-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 0;
+  z-index: 1;
+  background-color: rgba(255, 0, 68, 0.6);
 }
-.appointment-form form input[type=text],
-.appointment-form form input[type=tel],
-.appointment-form form input[type=email],
-.appointment-form form select,
-.appointment-form form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.appointment-form form button[type=submit] {
-  background-color: #0056b3;
-  color: #ffffff;
+
+button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 10px;
+  color: white;
+  background: #08a6df;
+  transition: background 0.3s;
+}
+button svg {
+  flex-shrink: 0;
+  margin-left: 5px;
+  fill: currentColor;
+}
+button:hover {
+  background: #0ab8f6;
+}
+
+.page-header.is-sticky {
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+}
+
+img {
+  max-width: 80%;
+}
+
+button {
+  font-size: 1rem;
+  background-color: #ff0135;
   padding: 0.5rem 2rem;
   border: none;
   cursor: pointer;
 }
-.appointment-form form button[type=submit]:hover {
-  background-color: #003d80;
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+section {
+  min-height: 100vh;
+}
+
+.hero {
+  padding-top: 20rem;
+  min-height: 100vh;
+  font-size: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/bg-header-2.jpeg.webp") no-repeat center center/cover;
+  filter: blur(3px);
+  z-index: -1;
+}
+.hero_button {
+  background-color: #ff0135;
+  color: #01ffcb;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  width: 30rem;
+}
+.hero_title {
+  display: block;
+  margin-bottom: 10rem;
+}
+
+.gallery {
+  background-color: #01ffcb;
+  padding: 2rem 0;
+}
+
+.testimonials {
+  background-color: #ff0135;
+  color: #01ffcb;
+  padding: 2rem 0;
+}
+
+.testimonial-item {
+  margin-bottom: 1rem;
+}
+
+.faq {
+  background-color: #01ffcb;
+  padding: 2rem 0;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.appointment-form {
+  background-color: #000;
+  padding: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 0.5rem 0;
+}
+form input[type=text],
+form input[type=tel],
+form input[type=email],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+form button[type=submit] {
+  background-color: #ff0135;
+  color: #01ffcb;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+form:hover {
+  background-color: #cd002a;
 }
 
 .contact {
-  background-color: #ffffff;
+  background-color: #01ffcb;
   padding: 2rem 0;
 }
 
 .footer {
-  background-color: #0056b3;
-  color: #ffffff;
+  background-color: #ff0135;
+  color: #01ffcb;
   padding: 1rem 0;
 }
-.footer .footer-content {
+
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-  .footer-content {
-    flex-direction: column;
-  }
+.container {
+  width: 95%;
+}
+
+.footer-content {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

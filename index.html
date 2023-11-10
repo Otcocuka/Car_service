@@ -13,66 +13,66 @@
 
   
 
-  <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">АвтоМастерская Премиум</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Домой <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Услуги</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Цены</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Отзывы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Контакты</a>
-                    </li>
-                </ul>
-                <span class="navbar-text">
-                    <a class="nav-link" href="tel:+9951234567890"><span class="phone-icon">📞</span> +995 (123) 456-7890</a>
-                </span>
-            </div>
-        </div>
-    </nav>
-</header>
 
 
-<header class="header">
+
+<header class="header page-header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <div class="header_top">
-                <div class="header_top__info">
-                    <div class="telephone"><a href="tel:+995123123123">+995123123123</a></div>
-                    <div class="schedule">С 9:00 до 19:00 без выходных</div>
+            <div class="header_logo">ASDASDASDSA</div>
+            <div class="header_content">
+                <div class="header_top">
+                    <div class="header_top__info">
+                        <div class="telephone"><a href="tel:+995123123123">+995123123123</a></div>
+                        <div class="schedule">С 9:00 до 19:00 без выходных</div>
+                    </div>
+                    <div class="header_top__button">
+                        <button class="button-secondary">ЗАКАЗАТЬ ЗВОНОК</button>
+                    </div>
+                    <div class="header_top__email"><a href="mailto:carservicebatumi@gmail.com">carservicebatumi@gmail.com</a></div>
+                    <div class="social_links"><a href="#">insta</a><a href="#">telegram</a><a href="#">wapp</a></div>
                 </div>
-                <div class="header_top__button">
-                    <button class="button-secondary">ЗАКАЗАТЬ ЗВОНОК</button>
+                <div class="header_bottom navbar">
+                        <ul class="navbar nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">ГЛАВНАЯ <span class="sr-only">(CURRENT PLACEHOLDER)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">УСЛУГИ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">ЦЕНЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials">НАШИ РАБОТЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">О НАС</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials">НОВОСТИ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials">ОТЗЫВЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
                 </div>
-                <div class="header_top__email"><a href="mailto:carservicebatumi@gmail.com">carservicebatumi@gmail.com</a></div>
-                <div class="social_links"><a href="">insta</a><a href="">telegram</a><a href="">wapp</a></div>
             </div>
-            <div class="header_bottom"></div>
+            
         </div>
     </nav>
 </header>
 
 <!-- Геройский Блок -->
 <section class="hero">
-    <div class="container text-center">
-        <h1 class="hero-title">Ваш автомобиль заслуживает лучшего — доверьтесь профессионалам!</h1>
-        <img src="clients.jpg" alt="Счастливые клиенты" class="hero-image">
-        <a href="#appointment-form" class="btn btn-primary btn-lg hero-cta">Записаться на сервис сейчас</a>
+    <div class="container text-center column">
+        <h1 class="hero_title">Ваш автомобиль заслуживает лучшего — доверьтесь профессионалам!</h1>
+
+        <div class="hero_button"><a href="#appointment-form" class="btn btn-primary btn-lg hero-cta">Записаться на сервис сейчас</a></div>
+        
     </div>
 </section>
 
@@ -142,12 +142,12 @@
     <div class="container">
         <h2>Запись на сервис</h2>
         <!-- Форма записи на сервис -->
-        <form>
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="tel" placeholder="Ваш телефон" required>
-            <input type="text" placeholder="Марка и модель автомобиля" required>
-            <input type="date" placeholder="Желаемая дата" required>
-            <input type="time" placeholder="Желаемое время" required>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+            <input type="text" name="car" placeholder="Марка и модель автомобиля" required>
+            <input type="date" name="date" placeholder="Желаемая дата" required>
+            <input type="time" name="time" placeholder="Желаемое время" required>
             <button type="submit">Записаться</button>
         </form>
     </div>
