@@ -145,7 +145,7 @@ section {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("/img/bg-header-2.jpeg.webp") no-repeat center center/cover;
+  background: url("/Car_service/img/bg-header-2.jpeg.webp") no-repeat center center/cover;
   filter: blur(3px);
   z-index: -1;
 }
