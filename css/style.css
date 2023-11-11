@@ -20,6 +20,10 @@ a {
   flex-direction: column;
 }
 
+.highlight {
+  background-color: #ff0135;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
   color: #fff;
@@ -33,33 +37,6 @@ body {
   margin: auto;
   max-width: 1200px;
   display: flex;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  padding-top: 1rem;
-}
-
-.header_top {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-.header_top .social_links {
-  display: flex;
-}
-.header_top .social_links > a {
-  display: block;
-  margin-right: 20px;
-}
-
-.navbar {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  display: flex;
-  justify-content: space-between;
 }
 
 .page-header {
@@ -127,12 +104,107 @@ button {
     transform: translateY(0);
   }
 }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel .carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel .carousel_item {
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.carousel .carousel_item__pic {
+  width: 100%;
+}
+.carousel .carousel_item__pic img {
+  width: 100%;
+  height: auto;
+}
+.carousel .carousel_item__name, .carousel .carousel_item__description, .carousel .carousel_item__price {
+  padding: 10px;
+}
+.carousel .prev, .carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+.carousel .prev {
+  left: 0;
+}
+.carousel .next {
+  right: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header_top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: end;
+}
+.header_top .button-secondary {
+  border-radius: 0;
+}
+.header_top .social_links {
+  margin-left: 1rem;
+  display: flex;
+}
+.header_top .social_links > a {
+  display: block;
+  margin-right: 20px;
+}
+
+.navbar {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+}
+
+.nav-link:hover:after, .nav-link:focus:after {
+  height: 5px;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 section {
   min-height: 100vh;
 }
 
 .hero {
-  padding-top: 20rem;
+  padding-top: 17rem;
   min-height: 100vh;
   font-size: 2rem;
   position: relative;
@@ -156,15 +228,115 @@ section {
   border: none;
   cursor: pointer;
   width: 30rem;
+  margin-bottom: 2rem;
 }
 .hero_title {
   display: block;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
-.gallery {
-  background-color: #01ffcb;
-  padding: 2rem 0;
+.about-us {
+  background-color: #ff0135;
+  min-height: 70vh;
+}
+.about-us h2 {
+  display: block;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+.about-us h3 {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.about-us .advantages {
+  display: flex;
+  gap: 1rem;
+}
+.about-us .advantages .advantage_item__name {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+}
+.about-us .advantages .advantage_item__description {
+  font-size: 1rem;
+}
+
+.photo-gallery {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.photo-gallery .left-side, .photo-gallery .right-side {
+  flex: 1;
+}
+.photo-gallery .left-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.photo-gallery .left-side img {
+  width: 100%;
+  height: auto;
+}
+.photo-gallery .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-gallery .right-side img {
+  width: 100%;
+  height: auto;
+}
+
+.services {
+  background-color: #fff;
+  color: #000;
+  padding-top: 3rem;
+}
+.services h2 {
+  display: block;
+  margin: 3rem 0;
+  font-size: 2.5rem;
+}
+.services h3 {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.services .carousel_item__name {
+  font-size: 1.5rem;
+}
+.services .carousel_item__description {
+  font-size: 1rem;
+}
+.services .carousel_item__price {
+  font-size: 1.5rem;
+}
+
+.benefits {
+  background-color: #ff0135;
+  min-height: 70vh;
+}
+.benefits h2 {
+  display: block;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+.benefits h3 {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.benefits .advantages {
+  display: flex;
+  gap: 1rem;
+}
+.benefits .advantages .advantage_item__name {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+}
+.benefits .advantages .advantage_item__description {
+  font-size: 1rem;
 }
 
 .testimonials {

@@ -41,3 +41,102 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
       })
       .catch(error => console.error('Ошибка:', error));
 });
+
+
+
+//carousel
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel');
+  const imageWrapper = carousel.querySelector('.carousel-images');
+  let images = Array.from(carousel.querySelectorAll('.carousel_item'));
+  const displayCount = parseInt(carousel.getAttribute('data-display-count')) || 1;
+  let currentIndex = 0;
+  let startX, isDragging = false;
+
+  // Клонирование элементов для бесконечной прокрутки
+  const clones = images.slice(0, displayCount).map(node => node.cloneNode(true));
+  clones.forEach(clone => imageWrapper.appendChild(clone));
+  images = images.concat(clones); // Обновление списка всех элементов с учетом клонов
+
+  function updateCarousel() {
+      const imageWidth = carousel.clientWidth / displayCount;
+      images.forEach(img => img.style.width = `${imageWidth}px`);
+      imageWrapper.style.transform = `translateX(${-imageWidth * currentIndex}px)`;
+
+      // Проверка на достижение конца и переход к началу
+      if (currentIndex >= images.length - displayCount) {
+          setTimeout(() => {
+              imageWrapper.style.transition = 'none';
+              currentIndex = 0;
+              imageWrapper.style.transform = `translateX(0px)`;
+              setTimeout(() => imageWrapper.style.transition = 'transform 0.5s ease', 0);
+          }, 500); // Сброс к началу после анимации
+      }
+  }
+
+  // Обработчики событий для листания мышкой
+  function handleDragStart(e) {
+      startX = e.pageX || e.touches[0].pageX;
+      isDragging = true;
+      imageWrapper.style.transition = 'none';
+  }
+
+  function handleDragMove(e) {
+      if (!isDragging) return;
+      const x = e.pageX || e.touches[0].pageX;
+      const moveBy = x - startX;
+      imageWrapper.style.transform = `translateX(${-carousel.clientWidth / displayCount * currentIndex + moveBy}px)`;
+  }
+
+  function handleDragEnd() {
+      isDragging = false;
+      const endX = e.pageX || e.changedTouches[0].pageX;
+      const offset = endX - startX;
+      if (offset < -50 && currentIndex < images.length - displayCount) {
+          currentIndex++;
+      } else if (offset > 50 && currentIndex > 0) {
+          currentIndex--;
+      }
+      imageWrapper.style.transition = 'transform 0.5s ease';
+      updateCarousel();
+  }
+
+  imageWrapper.addEventListener('mousedown', handleDragStart);
+  imageWrapper.addEventListener('touchstart', handleDragStart);
+  document.addEventListener('mousemove', handleDragMove);
+  document.addEventListener('touchmove', handleDragMove);
+  document.addEventListener('mouseup', handleDragEnd);
+  document.addEventListener('touchend', handleDragEnd);
+
+  // Добавление кнопок для навигации
+  const prevButton = document.createElement('button');
+  prevButton.innerText = 'Предыдущая';
+  prevButton.classList.add('prev');
+  carousel.appendChild(prevButton);
+
+  const nextButton = document.createElement('button');
+  nextButton.innerText = 'Следующая';
+  nextButton.classList.add('next');
+  carousel.appendChild(nextButton);
+
+  prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = images.length - displayCount - 1;
+          imageWrapper.style.transition = 'none';
+      }
+      updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+      if (currentIndex < images.length - displayCount) {
+          currentIndex++;
+      }
+      updateCarousel();
+  });
+
+  // Инициализация карусели
+  updateCarousel();
+});
