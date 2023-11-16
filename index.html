@@ -266,27 +266,112 @@
 
     <!-- Цены -->
     <section id="pricing" class="pricing">
+        <h2>Цены</h2>
         <div class="container">
-            <h2>Цены</h2>
-            <p>Шиномонтаж от 50 GEL. Сезонное предложение: подготовка к зиме - скидка 20%.</p>
+            
+                <div class="pricing_content__left">
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Компьютерная диагностика</h4>
+                        <div class="pricing_item__pic"><img src="img/electrics.jpeg" alt="Image 1"></div>
+                        
+                        <div class="pricing_item__description">Точная диагностика состояния автомобиля с помощью
+                            современного оборудования. Выявление неисправностей и рекомендации по их устранению.
+                        </div>
+                        <div class="pricing_item__price">от 2000 руб
+                        </div>
+                    </div>
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Шиномонтаж <br> <br></h4>
+                        <div class="pricing_item__pic"><img src="img/shini.jpeg" alt="Image 2"></div>
+                        
+                        <div class="pricing_item__description">Качественная установка и балансировка шин. Гарантия
+                            безопасности и комфорта при вождении.
+                        </div>
+                        <div class="pricing_item__price">от 1500 руб за комплект
+                        </div>
+                    </div>
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Ремонт двигателя <br> <br></h4>
+
+                        <div class="pricing_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div>
+                        <div class="pricing_item__description">Профессиональный ремонт и обслуживание двигателей всех
+                            типов. Использование качественных запчастей и современных технологий.
+                        </div>
+                        <div class="pricing_item__price">от 10000 руб
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing_content__right">
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Кузовные работы <br> <br></h4>
+
+                        <div class="pricing_item__pic"><img src="img/kuzov.jpg" alt="Image 1"></div>
+                        <div class="pricing_item__description">Восстановление кузова после ДТП, устранение коррозии,
+                            покраска. Высокое качество работ и точное соблюдение цвета.
+                        </div>
+                        <div class="pricing_item__price">от 5000 руб
+                        </div>
+                    </div>
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Замена масла и фильтров</h4>
+
+                        <div class="pricing_item__pic"><img src="img/oil.jpeg" alt="Image 2"></div>
+                        <div class="pricing_item__description">Замена моторного масла и всех фильтров с использованием
+                            высококачественных материалов. Продление срока службы двигателя и улучшение его работы.
+                        </div>
+                        <div class="pricing_item__price">от 2500 руб
+                        </div>
+                    </div>
+                    <div class="pricing_item">
+                        <h4 class="pricing_item__name">Чистка и заправка кондиционера
+
+                        <div class="pricing_item__pic"><img src="img/condition.jpeg" alt="Image 3"></div>
+
+                        </h4>
+                        <div class="pricing_item__description">Эффективная чистка и заправка системы кондиционирования.
+                            Обеспечение комфортного микроклимата в салоне автомобиля.
+                        </div>
+                        <div class="pricing_item__price">от 3000 руб
+                        </div>
+                    </div>
+
+
+
+                    <!-- Добавьте столько изображений, сколько вам нужно -->
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Фотогалерея -->
     <!-- Галерея работ -->
     <section class="gallery">
-        <div class="container">
+        <div class="container column">
             <h2>Галерея работ</h2>
-            <!-- Вставьте ваш слайдер с фотографиями "До" и "После" здесь -->
+            <div class="photo-gallery">
+                <div class="left-side">
+                    <img src="/img/team 1.webp" width="274" height="385" alt="#">
+                    <img src="/img/team 2.webp"  height="385" alt="#">
+                    <img src="/img/team 3.webp"  height="385" alt="#">
+                    <img src="/img/team 4.webp"  height="385" alt="#">
+                </div>
+                <div class="right-side">
+                    <img src="/img/team 5.webp" alt="#">
+                </div>
+                
+            </div>
         </div>
     </section>
 
     <!-- Отзывы Клиентов -->
     <section id="testimonials" class="testimonials">
-        <div class="container">
+        <div class="container column">
             <h2>Отзывы наших клиентов</h2>
             <!-- Вставьте блок отзывов клиентов сюда -->
             <a href="url_на_страницу_с_отзывами">Читать все отзывы</a>
+
+            <review-lab data-widgetid="6555c12573b67815d6391802"></review-lab>
+<script src="https://app.reviewlab.ru/widget/index-es2015.js" defer></script>
         </div>
     </section>
 
@@ -300,8 +385,9 @@
 
     <!-- Форма Записи -->
     <section id="appointment-form" class="appointment-form">
-        <div class="container">
+        <div class="container column">
             <h2>Запись на сервис</h2>
+            <h4>Заполните форму и наши специалисты свяжутся с вами сегодня</h4>
             <!-- Форма записи на сервис -->
             <form id="contactForm">
                 <input type="text" name="name" placeholder="Ваше имя" required>
@@ -309,15 +395,18 @@
                 <input type="text" name="car" placeholder="Марка и модель автомобиля" required>
                 <input type="date" name="date" placeholder="Желаемая дата" required>
                 <input type="time" name="time" placeholder="Желаемое время" required>
-                <button type="submit">Записаться</button>
+                <button class="btn btn-primary btn-lg hero-cta"  type="submit">Записаться</button>
             </form>
         </div>
     </section>
 
     <!-- Контакты -->
     <section id="contact" class="contact">
-        <div class="container">
+        <div class="container column">
             <h2>Контактная информация</h2>
+            <h4>ЕСТЬ ВОПРОСЫ ПО РЕМОНТУ ВАШЕГО АВТОМОБИЛЯ? ПОЗВОНИТЕ ИЛИ НАПИШИТЕ НАМ!
+            </h4>
+            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d263.6498608985942!2d41.61158584899577!3d41.615589338693574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDM2JzU2LjciTiA0McKwMzYnNDEuOCJF!5e0!3m2!1sru!2sge!4v1700119422076!5m2!1sru!2sge" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <!-- Интерактивная карта -->
             <!-- Вставьте iframe с Google Maps или аналогичным сервисом -->
             <p>ул. Либерти, 45, с 9:00 до 19:00 без выходных</p>
@@ -329,19 +418,19 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 АвтоМастерская Премиум. Все права защищены.</p>
-            <nav>
+            <div class="container column">
                 <!-- Ссылки на основные разделы сайта -->
                 <a href="#home">Домой</a>
                 <a href="#services">Услуги</a>
                 <a href="#pricing">Цены</a>
                 <a href="#testimonials">Отзывы</a>
                 <a href="#contact">Контакты</a>
-            </nav>
+            </div>
             <!-- Ссылки на социальные сети -->
             <!-- Вставьте иконки социальных сетей и ссылки на профили -->
             <div class="legal">
-                <a href="#privacy-policy">Политика конфиденциальности</a>
-                <a href="#terms-of-use">Условия использования</a>
+                <div class="policy"><a href="#privacy-policy">Политика конфиденциальности</a></div>
+                <div class="terms"><a href="#terms-of-use">Условия использования</a></div>
             </div>
         </div>
     </footer>

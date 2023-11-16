@@ -97,19 +97,18 @@ button
     to
         transform: translateY(0)
 
-
 //carousel
 
 .carousel
-  position: relative
-  overflow: hidden
-  width: 100% // Задаем ширину карусели
+    position: relative
+    overflow: hidden
+    width: 100% // Задаем ширину карусели
 
-  .carousel-images
+.carousel-images
     display: flex
     transition: transform 0.5s ease
 
-  .carousel_item
+.carousel_item
     flex-shrink: 0
     flex-grow: 1
     flex-basis: auto // Автоматически регулируем ширину каждого элемента карусели
@@ -117,16 +116,16 @@ button
     // Например, отступы, рамки и т.д.
 
     &__pic
-      width: 100% // Убедитесь, что картинки адаптируются под размер элемента
-      img
+        width: 100% // Убедитесь, что картинки адаптируются под размер элемента
+    img
         width: 100%
         height: auto
 
     &__name, &__description, &__price
-      padding: 10px
-      // Добавьте стили для текстовых элементов здесь
+        padding: 10px
+        // Добавьте стили для текстовых элементов здесь
 
-  .prev, .next
+.prev, .next
     position: absolute
     top: 50%
     transform: translateY(-50%)
@@ -136,17 +135,16 @@ button
     padding: 10px
     z-index: 10
 
-  .prev
+.prev
     left: 0
 
-  .next
+.next
     right: 0
 
 //header
 .header
     position: sticky
     top: 0
-    
 
 .header_top
     display: flex
@@ -161,7 +159,6 @@ button
         &>a
             display: block
             margin-right: 20px
-
 
 .navbar
     margin-top: 1rem
@@ -195,18 +192,15 @@ button
     -moz-transform: translateY(0px)
     transform: translateY(0px)
 
-
-
 section
-    
+
     min-height: 100vh
 //hero
 
 .hero
-    padding-top: 17rem
+    padding-top: 5rem
     min-height: 100vh
     font-size: 2rem
-    position: relative
     overflow: hidden
     &::before
         content: ""
@@ -231,12 +225,11 @@ section
         display: block
         margin-bottom: 6rem
 
-
 //about-us
 
 .about-us
     background-color: $primary-color
-    min-height: 70vh 
+    min-height: 70vh
     h2
         display: block
         margin-top: 3rem
@@ -251,35 +244,35 @@ section
         .advantage_item
             &__name
                 font-size: 1.7rem
-                margin:  2rem 0 
+                margin: 2rem 0
             &__description
                 font-size: 1rem
 // Стили для галереи
 .photo-gallery
-  display: flex
-  width: 100%
-  margin-bottom: 5rem
+    display: flex
+    width: 100%
+    margin-bottom: 5rem
 
-  .left-side, .right-side
+.left-side, .right-side
     flex: 1
 
-  .left-side
+.left-side
     display: grid
     grid-template-columns: repeat(2, 1fr) // Две колонки одинаковой ширины
     grid-gap: 10px // Расстояние между фотографиями
 
     img
-      width: 100%
-      height: auto
+        width: 100%
+        height: auto
 
-  .right-side
+.right-side
     display: flex
     justify-content: center
     align-items: center
 
     img
-      width: 100%
-      height: auto
+        width: 100%
+        height: auto
 //услуги 
 .services
     background-color: #fff
@@ -304,7 +297,7 @@ section
 //преимущества
 .benefits
     background-color: $primary-color
-    min-height: 70vh 
+    min-height: 70vh
     h2
         display: block
         margin-top: 3rem
@@ -319,16 +312,55 @@ section
         .advantage_item
             &__name
                 font-size: 1.7rem
-                margin:  2rem 0 
+                margin: 2rem 0
             &__description
                 font-size: 1rem
 
+//pricing
+.pricing
+    padding-top: 3rem
+    background-color: #fff
+    color: #000
+    h2
+        padding-left: 19.1%
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        font-size: 2rem
+        padding: 0
+    .container
+        gap: 15rem
+    .pricing_item
+        margin-bottom: 2rem
+        &__name
+            font-size: 1.5rem
+        &__description
+            font-size: 1rem
+        &__price
+            font-size: 1.5rem
+
+//gallery 
+.gallery
+    padding-top: 3rem
+    background-color: $primary-color
+    color: #fff
+    h2
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        font-size: 2rem
+        padding: 0
 
 // Стили для отзывов
 .testimonials
-    background-color: $primary-color
-    color: $secondary-color
-    padding: 2rem 0
+    padding-top: 3rem
+    background-color: #fff
+    color: #000
+    h2
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        padding-bottom: 3rem
 
 .testimonial-item
     margin-bottom: 1rem
@@ -343,8 +375,14 @@ section
 
 // Стили для формы записи
 .appointment-form
+    padding-top: 3rem
     background-color: $background-color
-    padding: 2rem 0
+    color: #FFF
+    h2
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        padding-bottom: 3rem
 
 form
     display: flex
@@ -356,32 +394,47 @@ form
     input[type='text'],
     input[type='tel'],
     input[type='email'],
+    input[type='date'],
+    input[type='time'],
     select,
     textarea
         width: 100%
-        padding: 0.5rem
+        padding: 2rem
         margin-bottom: 1rem
 
     button[type='submit']
         background-color: $primary-color
-        color: $secondary-color
-        padding: 0.5rem 2rem
+        padding: 2rem 2rem
         border: none
         cursor: pointer
+        border-radius: 0
+        color: white
+        transition: background 0.3s
 
     &:hover
-        background-color: darken($primary-color, 10%)
+        background-color: darken($primary-color, 50%)
 
 // Стили для контактной информации
 .contact
-    background-color: $secondary-color
-    padding: 2rem 0
+    padding: 3rem 0
+    background-color: #fff
+    color: #000
+    h2
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        padding-bottom: 3rem
+    .google-map
+        width: 100%
+    
 
 // Стили для подвала
 .footer
     background-color: $primary-color
-    color: $secondary-color
-    padding: 1rem 0
+    color: #fff
+    padding: 3rem 0
+    .container
+        align-items: center
 
 .footer-content
     display: flex
@@ -389,71 +442,66 @@ form
     align-items: center
 
 // Медиа запросы для адаптивности
-@media (max-width: 768px)
-.container
-    width: 95%
+// @media (max-width: 768px)
+// .container
+//     width: 95%
 
-.footer-content
-    flex-direction: column
+// .footer-content
+//     flex-direction: column
 
+// $iphone-x: 375px
+// $iphone-plus: 414px
+// $iphone-xr-xs-max: 414px
+// $iphone-12-mini: 360px
+// $iphone-12-12-pro: 390px
+// $iphone-12-pro-max: 428px
 
+// // Сброс стилей и базовые стили
+// // ...
 
-$iphone-x: 375px
-$iphone-plus: 414px
-$iphone-xr-xs-max: 414px
-$iphone-12-mini: 360px
-$iphone-12-12-pro: 390px
-$iphone-12-pro-max: 428px
+// // Медиа запросы для адаптивности
+// @media (max-width: $iphone-x), (max-width: $iphone-plus), (max-width: $iphone-xr-xs-max), (max-width: $iphone-12-mini), (max-width: $iphone-12-12-pro), (max-width: $iphone-12-pro-max)
+// .container
+//     width: 100%
+//     padding: 0 15px
 
-// Сброс стилей и базовые стили
-// ...
+// .header, .navbar
+//     flex-direction: column
+//     align-items: center
+//     // display: none
 
-// Медиа запросы для адаптивности
-@media (max-width: $iphone-x), (max-width: $iphone-plus), (max-width: $iphone-xr-xs-max), (max-width: $iphone-12-mini), (max-width: $iphone-12-12-pro), (max-width: $iphone-12-pro-max)
-  .container
-    width: 100%
-    padding: 0 15px
+// .hero
+//     padding-top: 10rem
+//     &::before
+//         filter: blur(2px)
 
-  .header, .navbar
-    flex-direction: column
-    align-items: center
-    display: none
+// .hero_title
+//     font-size: 24px
+//     margin-bottom: 2rem
 
+// .services, .pricing, .testimonials, .contact, .about-us, .gallery, .faq, .appointment-form
+//     padding: 20px 0
 
-  .hero
-    padding-top: 10rem
-    &::before
-      filter: blur(2px)
+// .footer
+//     text-align: center
+//     .footer-content
+//         flex-direction: column
+//         margin-top: 20px
 
+// nav
+//     display: none // Вы можете добавить стили для гамбургер-меню здесь
 
+// button, .button-secondary
+//     padding: 12px 20px
+//     font-size: 16px
 
-  .hero_title
-    font-size: 24px
-    margin-bottom: 2rem
+// .header_top, .social_links, .navbar nav
+//     display: flex
+//     flex-direction: column
+//     align-items: center
+//     margin-top: 1rem
 
-  .services, .pricing, .testimonials, .contact, .about-us, .gallery, .faq, .appointment-form
-    padding: 20px 0
+// .page-header
+//     position: static // Изменение позиционирования для мобильных устройств
 
-  .footer
-    text-align: center
-    .footer-content
-      flex-direction: column
-      margin-top: 20px
-
-  nav
-    display: none // Вы можете добавить стили для гамбургер-меню здесь
-
-  button, .button-secondary
-    padding: 12px 20px
-    font-size: 16px
-
-  .header_top, .social_links, .navbar nav
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin-top: 1rem
-
-  .page-header
-    position: static // Изменение позиционирования для мобильных устройств
-
-  // Дополнительные адаптивные стили
+//     // Дополнительные адаптивные стили
