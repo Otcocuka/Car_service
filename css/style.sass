@@ -47,6 +47,7 @@ body
     padding: 20px 0
     z-index: 1
     background-color: rgba(255, 0, 68, 0.6)
+    width: 100%
 
 nav
     display: flex
@@ -82,7 +83,7 @@ button
     animation: slideDown 0.35s ease-out
 
 img
-    max-width: 80%
+    max-width: 99%
 
 button
     font-size: 1rem
@@ -90,6 +91,7 @@ button
     padding: 0.5rem 2rem
     border: none
     cursor: pointer
+    border-radius: 0
 
 @keyframes slideDown
     from
@@ -109,12 +111,15 @@ button
     transition: transform 0.5s ease
 
 .carousel_item
+    display: flex
+    flex-direction: column
+    text-align: center
+    align-items: center
     flex-shrink: 0
     flex-grow: 1
     flex-basis: auto // Автоматически регулируем ширину каждого элемента карусели
     // Добавьте дополнительные стили для карусельного элемента здесь
     // Например, отступы, рамки и т.д.
-
     &__pic
         width: 100% // Убедитесь, что картинки адаптируются под размер элемента
     img
@@ -140,6 +145,70 @@ button
 
 .next
     right: 0
+
+// Popup
+
+$transition-time: 0.2s
+
+.popup
+    z-index: 1000
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: flex
+    justify-content: center
+    align-items: center
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0s linear $transition-time, opacity $transition-time linear
+
+.popup-content
+    position: relative
+    padding: 2rem
+    width: 300px
+    background: white
+    border-radius: 5px
+
+.close-button
+    position: absolute
+    top: 10px
+    right: 15px
+    font-size: 25px
+    cursor: pointer
+
+// аккордеон
+.accordion
+    width: 100%
+    &::hover
+        transform: translateX(100px)
+.accordion-item
+    margin-bottom: 10px
+    &:hover
+        transform: translateX(10px)
+    
+
+    .accordion-toggle
+        background-color: $primary-color
+        color: $text-color
+        cursor: pointer
+        padding: 18px
+        width: 100%
+        border: none
+        text-align: left
+        outline: none
+        transition: 0.4s
+
+    .accordion-content
+        padding: 0 18px
+        background-color: darken($primary-color, 12%)
+        display: none
+        overflow: hidden
+
+    p
+        margin: 18px 0
 
 //header
 .header
@@ -315,10 +384,13 @@ section
                 margin: 2rem 0
             &__description
                 font-size: 1rem
+            &__pic
+                filter: invert(1)
 
 //pricing
 .pricing
     padding-top: 3rem
+    padding-bottom: 3rem
     background-color: #fff
     color: #000
     h2
@@ -338,6 +410,16 @@ section
             font-size: 1rem
         &__price
             font-size: 1.5rem
+    .pricing_link
+        width: 15rem
+        background-color: #ff0135
+        display: block
+        padding: 2rem 2rem
+        border: none
+        cursor: pointer
+        border-radius: 0
+        color: white
+        transition: background 0.3s
 
 //gallery 
 .gallery
@@ -367,22 +449,37 @@ section
 
 // Стили для FAQ
 .faq
-    background-color: $secondary-color
+    background-color: #fff
     padding: 2rem 0
 
 .faq-item
     margin-bottom: 1rem
 
 // Стили для формы записи
+
+
 .appointment-form
     padding-top: 3rem
-    background-color: $background-color
-    color: #FFF
+    background-color: #fff
+    color: #000
+    position: relative
+    .container
+        align-items: flex-end
     h2
         font-size: 3rem
         padding-bottom: 3rem
+        z-index: 1
     h4
         padding-bottom: 3rem
+        z-index: 1
+    .form_image
+        position: absolute
+        left: 0
+        top: 5rem
+        z-index: 0
+    #contactForm
+        width: 45%
+        z-index: 1
 
 form
     display: flex
@@ -404,6 +501,7 @@ form
 
     button[type='submit']
         background-color: $primary-color
+        display: block
         padding: 2rem 2rem
         border: none
         cursor: pointer
@@ -411,8 +509,8 @@ form
         color: white
         transition: background 0.3s
 
-    &:hover
-        background-color: darken($primary-color, 50%)
+    // &:hover
+    //     background-color: darken($primary-color, 10%)
 
 // Стили для контактной информации
 .contact
@@ -426,7 +524,6 @@ form
         padding-bottom: 3rem
     .google-map
         width: 100%
-    
 
 // Стили для подвала
 .footer
@@ -435,11 +532,60 @@ form
     padding: 3rem 0
     .container
         align-items: center
-
+        gap: 1rem
+    .legal
+        display: flex
+        flex-direction: column
+        gap: 1rem
 .footer-content
     display: flex
     justify-content: space-between
     align-items: center
+
+.footer_services
+    text-align: center
+
+.footer_top
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    align-items: center
+    justify-content: end
+    .button-secondary
+        border-radius: 0
+    .social_links
+        margin-left: 1rem
+        display: flex
+        &>a
+            display: block
+            margin-right: 20px
+
+// SERVICES
+
+.services
+    padding-top: 3rem
+    background-color: #fff
+    color: #000
+    min-height: 90vh
+    a
+        color: #000
+        display: block
+    h2
+        font-size: 3rem
+        padding-bottom: 3rem
+    h4
+        font-size: 2rem
+        padding: 0
+    .container
+        justify-content: start
+    &_item
+        margin-bottom: 2rem
+        &__name
+            font-size: 1.5rem
+        &__links
+            font-size: 1rem
+        &__price
+            font-size: 1.5rem
 
 // Медиа запросы для адаптивности
 // @media (max-width: 768px)

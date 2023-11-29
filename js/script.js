@@ -1,3 +1,6 @@
+
+
+
 // sticky header
 
 const header = document.querySelector(".page-header");
@@ -111,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Добавление кнопок для навигации
   const prevButton = document.createElement('button');
-  prevButton.innerText = 'Предыдущая';
+  prevButton.innerText = '<';
   prevButton.classList.add('prev');
   carousel.appendChild(prevButton);
 
   const nextButton = document.createElement('button');
-  nextButton.innerText = 'Следующая';
+  nextButton.innerText = '>';
   nextButton.classList.add('next');
   carousel.appendChild(nextButton);
 
@@ -140,3 +143,40 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация карусели
   updateCarousel();
 });
+
+
+
+
+// popup
+const openPopupButtons = document.querySelectorAll(".open-popup");
+const closePopupButton = document.getElementById("close-popup");
+const popup = document.getElementById("popup");
+
+openPopupButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    popup.style.visibility = "visible";
+    popup.style.opacity = "1";
+  });
+});
+
+closePopupButton.addEventListener("click", () => {
+  popup.style.visibility = "hidden";
+  popup.style.opacity = "0";
+});
+
+
+
+// аккордеон
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const accordionContent = button.nextElementSibling;
+  
+      button.classList.toggle('active');
+  
+      if (button.classList.contains('active')) {
+        accordionContent.style.display = 'block';
+      } else {
+        accordionContent.style.display = 'none';
+      }
+    });
+  });

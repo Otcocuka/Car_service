@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автосервис</title>
+    <!-- Подключение минифицированного CSS файла -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключение Bootstrap CDN если нужно -->
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <header class="header page-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="header_logo">Место для лого</div>
+                <div class="header_content">
+                    <div class="header_top">
+                        <div class="header_top__info">
+                            <div class="telephone"><a href="tel:+995123123123">+995123123123</a></div>
+                            <div class="schedule">С 9:00 до 19:00 без выходных</div>
+                        </div>
+                        <div class="header_top__button">
+                            <button class="button-secondary">ЗАКАЗАТЬ ЗВОНОК</button>
+                        </div>
+                        <div class="header_top__email">
+                            <div>E-mail:</div> <a
+                                href="mailto:carservicebatumi@gmail.com">carservicebatumi@gmail.com</a>
+                        </div>
+                        <div class="social_links"><a href="#"><img src="/img/insta.svg" width="32px" height="32px"
+                                    alt="#"></a><a href="#"><img src="/img/tg.svg" width="32px" height="32px"
+                                    alt="#"></a><a href="#"><img src="/img/wa.svg" width="32px" height="32px"
+                                    alt="#"></a></div>
+                    </div>
+                    <div class="header_bottom navbar">
+                        <ul class="navbar nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/index.html">ГЛАВНАЯ <span class="sr-only">(CURRENT
+                                        PLACEHOLDER)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#services">УСЛУГИ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/prices.html">ЦЕНЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#testimonials">НАШИ РАБОТЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#about-us">О НАС</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#testimonials">НОВОСТИ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#testimonials">ОТЗЫВЫ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#contact">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+   
+
+   
+
+     <!-- Цены -->
+     <section id="services" class="services">
+        <h2>Услуги</h2>
+        <button class="open-popup">Открыть попап</button>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-button" id="close-popup">&times;</span>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+            <button class="btn btn-primary btn-lg hero-cta"  type="submit">Записаться</button>
+        </form>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="services_content__left">
+                    <div class="services_item">
+                        <h4 class="services_item__name">Техническое обслуживание</h4>
+                        <!-- <div class="pricing_item__pic"><img src="img/electrics.jpeg" alt="Image 1"></div> -->
+                        
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">ТО с отметкой в сервисной книжке</a>
+                                <a href="#">Замена воздушного фильтра</a>
+                                <a href="#">Замена масла в АКПП</a>
+                                <a href="#">Замена масла в вариаторе</a>
+                                <a href="#">Замена масла в МКПП</a>
+                                <a href="#">Замена масла в двигателе</a>
+                                <a href="#">Замена масла в редукторе</a>
+                                <a href="#">Замена масляного фильтра</a>
+                                <a href="#">Замена салонного фильтра</a>
+                                <a href="#">Замена топливного фильтра</a>
+                                <a href="#">Замена тормозной жидкости</a>
+                                <a href="#">Замена свечей зажигания</a>
+                                <a href="#">Замена свечей накаливания</a>
+                                <a href="#">Замена ремня ГРМ</a>
+                                <a href="#">Замена цепи ГРМ</a>
+                                <a href="#">Замена приводных ремней</a>
+                                <a href="#">Замена масла в раздаточной коробке</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт системы охлаждения</h4>
+                        <!-- <div class="services_item__pic"><img src="img/shini.jpeg" alt="Image 2"></div> -->
+                        
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика системы охлаждения</a>
+                                <a href="#">Замена вентилятора охлаждения</a>
+                                <a href="#">Замена водяного насоса</a>
+                                <a href="#">Замена радиатора</a>
+                                <a href="#">Замена радиатора отопителя</a>
+                                <a href="#">Замена термостата</a>
+                                <a href="#">Устранение течи антифриза</a>
+                                <a href="#">Промывка радиатора</a>
+                                <a href="#">Замена антифриза</a>
+                                <a href="#">Замена расширительного бачка</a>
+                                <a href="#">Замена датчика температуры</a>
+                                <a href="#">Опрессовка системы охлаждения</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт выхлопной системы </h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <li href="#">Удаление катализатора</li>
+                                <li href="#">Установка обманки катализатора</li>
+                                <li href="#">Замена катализатора</li>
+                                <li href="#"> Аргонная сварка</li>
+                                <li href="#">Замена глушителя</li>
+                                <li href="#">Замена гофры</li>
+                                <li href="#">Замена сажевого фильтра</li>
+                                <li href="#">Удаление сажевого фильтра</li>
+                                <li href="#">Очистка сажевого фильтра</li>
+                                <li href="#">Установка пламегасителя</li>
+                            </ul>
+                        </div>
+                        <div class="services_item__price">от 10000 руб
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт подвески</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика ходовой части</a>
+                                <a href="#">Диагностика пневмоподвески</a>
+                                <a href="#">Ремонт пневмоподвески</a>
+                                <a href="#">Замена амортизаторов</a>
+                                <a href="#">Замена подшипника ступицы</a>
+                                <a href="#">Замена сайлентблоков</a>
+                                <a href="#">Замена шаровой опоры</a>
+                                <a href="#">Замена рычага подвески</a>
+                                <a href="#">Замена стабилизатора</a>
+                                <a href="#">Замена стоек стабилизатора</a>
+                                <a href="#">Замена опорных подшипников</a>
+                                <a href="#">Замена пружин подвески</a>
+                                <a href="#">Замена пневмобаллона</a>
+                                <a href="#">Замена пневмокомпрессора</a>
+                                <a href="#">Замена пневмоамортизатора</a>
+                                <a href="#">Адаптация пневмоподвески</a>
+                                <a href="#">Замена датчика высоты подвески</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт тормозной системы</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика тормозной системы</a>
+                                <a href="#">Диагностика АБС</a>
+                                <a href="#">Обслуживание тормозных механизмов</a>
+                                <a href="#">Замена тормозных дисков</a>
+                                <a href="#">Замена тормозных колодок</a>
+                                <a href="#">Замена тормозных суппортов</a>
+                                <a href="#">Замена тормозных трубок</a>
+                                <a href="#">Замена троса ручного тормоза</a>
+                                <a href="#">Регулировка ручного тормоза</a>
+                                <a href="#">Замена уплотнительных колец</a>
+                                <a href="#">Замена тормозных шлангов</a>
+                                <a href="#">Замена датчика ABS</a>
+                                <a href="#">Ремонт ABS</a>
+                                <a href="#">Замена вакуумного усилителя</a>
+                                <a href="#">Замена главного тормозного цилиндра</a>
+                                <a href="#">Прокачка тормозов</a>
+                                <a href="#">Замена тормозных барабанов</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт автоэлектрики</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика электрооборудования</a>
+                                <a href="#">Замена ламп</a>
+                                <a href="#">Ремонт генератора</a>
+                                <a href="#">Ремонт электропроводки</a>
+                                <a href="#">Ремонт системы зажигания</a>
+                                <a href="#">Замена предохранителей</a>
+                                <a href="#">Замена реле регулятора</a>
+                                <a href="#">Ремонт стартера</a>
+                                <a href="#">Проверка АКБ</a>
+                                <a href="#"> Замена АКБ</a>
+                                <a href="#">Замена датчиков</a>
+                                <a href="#">Компьютерная диагностика</a>
+                                <a href="#">Замена катушки (модуля) зажигания</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт стекол</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Замена лобового стекла</a>
+                                <a href="#">Замена стекла двери</a>
+                                <a href="#">Замена бокового стекла</a>
+                                <a href="#">Замена заднего стекла</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">
+                            Шиномонтаж</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Балансировка колес</a>
+                                <a href="#">Шиномонтаж колес</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="services_content__right">
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт двигателя</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/kuzov.jpg" alt="Image 1"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика двигателя</a>
+                                <a href="#">Капитальный ремонт двигателя</a>
+                                <a href="#">Замер компрессии</a>
+                                <a href="#">Эндоскопия цилиндров</a>
+                                <a href="#">Замена опор двигателя</a>
+                                <a href="#">Замена помпы двигателя</a>
+                                <a href="#">Замена масляного насоса</a>
+                                <a href="#">Чистка впускного коллектора</a>
+                                <a href="#">Замена маслосъемных колпачков</a>
+                                <a href="#">Замена прокладки ГБЦ</a>
+                                <a href="#">Ремонт ГБЦ</a>
+                                <a href="#">Замена прокладки клапанной крышки</a>
+                                <a href="#">Замена прокладки поддона</a>
+                                <a href="#">Устранение течи масла</a>
+                                <a href="#">Замена маслоотделителя</a>
+                                <a href="#">Замена и ремонт турбины</a>
+                                <a href="#">Замена вкладышей двигателя</a>
+                                <a href="#">Замена гидрокомпенсаторов</a>
+                                <a href="#">Замена направляющих втулок клапанов</a>
+                                <a href="#">Замена поршневых колец</a>
+                                <a href="#">Замена распредвала</a>
+                                <a href="#">Промывка масляной системы</a>
+                                <a href="#">Ремонт блока цилиндров</a>
+                                <a href="#">Замена коленвала</a>
+                                <a href="#">Замена муфт изменения фаз ГРМ</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт топливной системы</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/oil.jpeg" alt="Image 2"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика системы подачи топлива</a>
+                                <a href="#">Замена топливного насоса</a>
+                                <a href="#"> Замена ТНВД</a>
+                                <a href="#">Замена форсунок</a>
+                                <a href="#">Промывка инжектора</a>
+                                <a href="#">Промывка форсунок</a>
+                                <a href="#">Промывка дроссельной заслонки</a>
+                                <a href="#">Промывка топливного бака</a>
+                                <a href="#">Замена лямбда зонда</a>
+                                <a href="#">Адаптация дроссельной заслонки</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт трансмиссии</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика КПП</a>
+                                <a href="#">Ремонт АКПП</a>
+                                <a href="#">Замена сцепления</a>
+                                <a href="#">Замена ШРУСа</a>
+                                <a href="#">Замена пыльника ШРУСа</a>
+                                <a href="#">Замена муфты карданного вала</a>
+                                <a href="#">Замена механизма переключения КПП</a>
+                                <a href="#">Замена троса сцепления</a>
+                                <a href="#">Замена сальников</a>
+                                <a href="#">Замена приводных валов</a>
+                                <a href="#">Замена раздаточной коробки</a>
+                                <a href="#">Замена заднего моста</a>
+                                <a href="#">Замена карданного вала</a>
+                                <a href="#">Замена крестовин</a>
+                                <a href="#">Ремонт вариатора</a>
+                                <a href="#">Ремонт редукторов</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт рулевого управления</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика рулевого управления</a>
+                                <a href="#">Замена рулевого кардана</a>
+                                <a href="#">Замена пыльника рулевой рейки</a>
+                                <a href="#">Замена рулевой тяги</a>
+                                <a href="#">Ремонт рулевой рейки</a>
+                                <a href="#">Регулировка сход-развала</a>
+                                <a href="#">Замена наконечника рулевой тяги</a>
+                                <a href="#">Замена рулевой рейки</a>
+                                <a href="#">Замена насоса ГУР</a>
+                                <a href="#">Ремонт насоса ГУР</a>
+                                <a href="#">Замена жидкости гидроусилителя</a>
+                                <a href="#">Замена рулевой колонки</a>
+                                <a href="#">Адаптация электроусилителя рулевого управления</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Ремонт системы кондиционирования</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Диагностика кондиционера</a>
+                                <a href="#">Заправка кондиционера</a>
+                                <a href="#">Антибактериальная обработка кондиционера</a>
+                                <a href="#">Чистка стоков дренажей</a>
+                                <a href="#">Замена муфты компрессора</a>
+                                <a href="#">Замена компрессора кондиционера</a>
+                                <a href="#">Поиск у устранение утечки хладагента</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Установка дополнительного оборудования</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Установка мультимедиа</a>
+                                <a href="#">Установка видеорегистратора</a>
+                                <a href="#">Установка камеры заднего вида</a>
+                                <a href="#">Установка радар-детектора</a>
+                                <a href="#">Установка парктроников</a>
+                                <a href="#">Тонировка</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services_item">
+                        <h4 class="services_item__name">Защита от угона</h4>
+
+                        <!-- <div class="services_item__pic"><img src="img/engine.jpeg" alt="Image 3"></div> -->
+                        <div class="services_item__links">
+                            <ul>
+                                <a href="#">Установка сигнализации</a>
+                                <a href="#"> Установка спутниковой сигнализации</a>
+                                <a href="#">Установка автозапуска</a>
+                                <a href="#">Демонтаж сигнализации</a>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Добавьте столько изображений, сколько вам нужно -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="legal">
+                <div class="header_top">
+                    <div class="header_top__info">
+                        <div class="telephone"><a href="tel:+995123123123">+995123123123</a></div>
+                        <div class="schedule">С 9:00 до 19:00 без выходных</div>
+                    </div>
+                    <div class="header_top__button">
+                        <button class="button-secondary">ЗАКАЗАТЬ ЗВОНОК</button>
+                    </div>
+                    <div class="header_top__email">
+                        <div>E-mail:</div> <a
+                            href="mailto:carservicebatumi@gmail.com">carservicebatumi@gmail.com</a>
+                    </div>
+                    <div class="social_links"><a href="#"><img src="/img/insta.svg" width="32px" height="32px"
+                                alt="#"></a><a href="#"><img src="/img/tg.svg" width="32px" height="32px"
+                                alt="#"></a><a href="#"><img src="/img/wa.svg" width="32px" height="32px"
+                                alt="#"></a></div>
+                </div>
+                <p>&copy; 2023 АвтоМастерская Премиум. Все права защищены.</p>
+                    <div class="policy"><a href="#privacy-policy">Политика конфиденциальности</a></div>
+                    <div class="terms"><a href="#terms-of-use">Условия использования</a></div>
+                </div>            
+            <div class="container column">
+                <a class="nav-link" href="/index.html">Главная </a>
+                <a class="nav-link" href="/index.html#services">Услуги</a>
+
+                <a class="nav-link" href="/prices.html">Цены</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Наши работы</a>
+                <a class="nav-link" href="/index.html#about-us">О нас</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Новости</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Отзывы</a>
+
+                <a class="nav-link" href="/index.html#contact">Контакты</a>
+
+            </div>
+            
+            <!-- Ссылки на социальные сети -->
+            <!-- Вставьте иконки социальных сетей и ссылки на профили -->
+            
+            <div class="container column footer_services">
+                <a href="">Услуги</a>
+                <a class="nav-link" href="/index.html#about-us">Техническое обслуживание</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт двигателя</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт системы охлаждения</a>
+
+                <a class="nav-link" href="/index.html#contact">Ремонт топливной системы
+                </a>
+                <a class="nav-link" href="/index.html#about-us">Ремонт выхлопной системы</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт трансмиссии</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт подвески</a>
+
+                
+            </div>
+            <div class="container column footer_services">
+                <a class="nav-link" href="/index.html#about-us">Ремонт тормозной системы</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт системы кондиционирования</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Ремонт автоэлектрики</a>
+
+                <a class="nav-link" href="/index.html#contact">Установка дополнительного оборудования
+                </a>
+                <a class="nav-link" href="/index.html#testimonials">Ремонт стекол</a>
+
+                <a class="nav-link" href="/index.html#testimonials">Защита от угона
+                </a>
+
+                <a class="nav-link" href="/index.html#contact">Шиномонтаж
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <!-- Подключение скриптов Bootstrap CDN если нужно -->
+    <!-- Ваши JavaScript файлы -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
